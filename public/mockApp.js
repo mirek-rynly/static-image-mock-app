@@ -4,11 +4,11 @@
 
   window.setImagePath = (imageSelector) => {
     let imgPath = `/public/images/rynly-community-slide-${getCurrentScreenNum()}.jpg`;
-    $(imageSelector).get(0).src = imgPath;
+    document.querySelect(imageSelector).src = imgPath;
   };
 
   window.redirectToNextScreen = () => {
-    let currentScreenNum = getCurrentScreenNum()
+    let currentScreenNum = getCurrentScreenNum();
       // 13 is the argos slide
       if (currentScreenNum >= 13)
       {
