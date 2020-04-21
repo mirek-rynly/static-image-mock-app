@@ -1,9 +1,8 @@
 /* jshint node: true */
 "use strict";
 
-let express = require("express");
 require("log-timestamp");
-
+let express = require('express');
 const EXPRESS_PORT = 8081;
 
 let app = express();
