@@ -11,35 +11,15 @@ const EXPRESS_PORT = 8081;
 let app = express();
 
 app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
-
-// Server static pages located in script dir
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static('public'));
 
 app.get('/', (req, res) => {
-  res.redirect('/screen/1');
+  res.redirect('/1');
 });
 
-
-app.get('/screen/:number', (req, res, next) => {
-
-  var options = {
-    root: __dirname,
-    // dotfiles: 'deny',
-    // headers: {
-    //   'x-timestamp': Date.now(),
-    //   'x-sent': true
-    // }
-  };
-
-  let number = req.params.number;
-
-  res.sendFile("/public/index.html", options, function (err) {
-    if (err) {
-      next(err);
-    } else {
-      console.log(`On route ${number}`);
-    }
-  });
+app.get('/:number', (req, res, next) => {
+  let options = { root: 'public'};
+  res.sendFile("index.html", options);
 });
 
 app.listen(EXPRESS_PORT, () => {
