@@ -1,7 +1,9 @@
 #screenshot {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   cursor: pointer;
   visibility: hidden; /* We'll override this with JS once the image is fully loaded */
 }
@@ -12,7 +14,7 @@
   }
 
   #screenshot {
-    max-width: 100%;
-    min-width: 100%;
+    height: 100vh;
+    max-height: 100%;
   }
 }
