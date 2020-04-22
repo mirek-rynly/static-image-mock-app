@@ -21,6 +21,7 @@
   window.preloadNextImages = () => {
     let currentNum = getCurrentScreenNum();
     for (let i = currentNum; i < 13; i++) {
+      console.log(`Preloading image ${i}`);
       var image = new Image();
       image.src = getImagePath(currentNum);
     }
