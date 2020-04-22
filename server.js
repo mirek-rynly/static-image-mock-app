@@ -10,8 +10,13 @@ const EXPRESS_PORT = 8081;
 
 let app = express();
 
+let logRequestMiddleware = (req, res, next) => {
+    console.log(req.originalUrl);
+    next();
+};
+
 app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
-app.use('/public', express.static('public'));
+app.use('/public', logRequestMiddleware, express.static('public'));
 
 app.get('/', (req, res) => {
   res.redirect('/1');

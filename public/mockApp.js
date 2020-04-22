@@ -27,7 +27,9 @@
     for (let i = currentNum; i < 13; i++) {
       console.log(`Preloading image ${i}`);
       var image = new Image();
-      image.src = getImagePath(currentNum);
+      image.src = getImagePath(i);
+
+      image.onload = () => console.log("loaded " + i + "?");
     }
   };
 
