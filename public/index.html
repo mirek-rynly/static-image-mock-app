@@ -9,7 +9,7 @@
         <!-- alt="" hides the 'corrupt' thumbnail while we wait for js to update the src -->
         <img id='screenshot' alt="" onclick='redirectToNextScreen()'/>
         <script>
-            setImagePath('#screenshot');
+            loadAndShowImage('#screenshot');
             preloadNextImages();
         </script>
     </body>

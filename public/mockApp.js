@@ -2,9 +2,13 @@
 (function() {
   "use strict";
 
-  window.setImagePath = (imageSelector) => {
+  window.loadAndShowImage = (imageSelector) => {
     let imgPath = getImagePath(getCurrentScreenNum());
-    document.querySelector(imageSelector).src = imgPath;
+    let imgElem = document.querySelector(imageSelector);
+    imgElem.src = imgPath;
+    imgElem.onload = () => {
+      imgElem.style.visibility = "visible";
+    };
   };
 
   window.redirectToNextScreen = () => {

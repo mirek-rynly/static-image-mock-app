@@ -1,8 +1,9 @@
-img {
+#screenshot {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  cursor: pointer
+  cursor: pointer;
+  visibility: hidden; /* We'll override this with JS once the image is fully loaded */
 }
 
 @media only screen and (max-device-width : 480px) {
@@ -10,7 +11,7 @@ img {
     background-color: #8B181C;
   }
 
-  img {
+  #screenshot {
     max-width: 100%;
     min-width: 100%;
   }
