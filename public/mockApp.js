@@ -28,7 +28,7 @@
   }
 
   function getImagePath(imageNum) {
-    return `/public/images/rynly-community-slide-${imageNum}.jpg`;
+    return `/public/images/Walmart${imageNum}.jpg`;
   }
 
 })();
