@@ -13,8 +13,7 @@
 
   window.redirectToNextScreen = () => {
     let currentScreenNum = getCurrentScreenNum();
-      // 13 is the argos slide
-      if (currentScreenNum >= 13)
+      if (currentScreenNum >= 13) // There are 13 slides
       {
           return;
       }
@@ -28,7 +27,7 @@
   }
 
   function getImagePath(imageNum) {
-    return `/public/images/Walmart${imageNum}.jpg`;
+    return `/public/images/WalmartDeck${imageNum}.jpg`;
   }
 
 })();

@@ -20,10 +20,6 @@ app.get('/page/:number', (req, res, next) => {
   var options = {
     root: __dirname,
     dotfiles: 'deny',
-    // headers: {
-    //   'x-timestamp': Date.now(),
-    //   'x-sent': true
-    // }
   };
 
   let number = req.params.number;
