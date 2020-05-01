@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rynly Community</title>
+        <link rel="stylesheet" type="text/css" href="/mockApp.css">
+        <script src="/mockApp.js"></script>
+    </head>
+    <body>
+        <!-- alt="" hides the 'corrupt' thumbnail while we wait for js to update the src -->
+        <img id='screenshot' alt="" onclick='redirectToNextScreen()'/>
+        <script>
+            if (getCurrentClient() == "sainsbury") {
+                console.log("here");
+                let child = document.createElement('div');
+                child.innerHTML = "No Sainsbury Slides";
+                document.querySelector("body").appendChild(child);
+            } else {
+                loadAndShowImage('#screenshot');
+            }
+        </script>
+    </body>
+</html>

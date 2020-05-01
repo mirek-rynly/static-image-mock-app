@@ -2,14 +2,25 @@
 <html>
     <head>
         <title>Rynly Community</title>
-        <link rel="stylesheet" type="text/css" href="/public/mockApp.css">
-        <script src="/public/mockApp.js"></script>
+        <link rel="stylesheet" type="text/css" href="/mockApp.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <body>
-        <!-- alt="" hides the 'corrupt' thumbnail while we wait for js to update the src -->
-        <img id='screenshot' alt="" onclick='redirectToNextScreen()'/>
-        <script>
-            loadAndShowImage('#screenshot');
-        </script>
+
+<body>
+    <nav id=header-navbar class="navbar navbar-expand navbar-dark">
+        <div class="container">
+            <img id="rynly-header-logo" src="/images/rynly-logo-white.svg">
+            <span id="community-txt" class="mr-auto">COMMUNITY</span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="my-3">
+            Which community? Please check that you've correctly entered entered the full url.
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; 2020 - Rynly Platform</p>
+        </footer>
+    </div>
     </body>
 </html>

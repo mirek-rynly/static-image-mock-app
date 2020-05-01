@@ -1,3 +1,19 @@
+#header-navbar {
+  color: white;
+  background-color: #8B181C;
+}
+
+#rynly-header-logo {
+  height: 36px;
+  padding: 2px 0px 2px 0px;
+  margin-left: -15px; /* Text doesn't actually start at image border, so shift it left */
+}
+
+#community-txt {
+  font-size: 18px;
+  color: rgba(255,255,255,.5);
+}
+
 #screenshot {
   position: fixed;
   top: 50%;

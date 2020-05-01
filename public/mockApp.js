@@ -17,17 +17,32 @@
       {
           return;
       }
-      window.location = `/${currentScreenNum + 1}`;
+      window.location = `/${window.getCurrentClient()}/${currentScreenNum + 1}`;
   };
 
   function getCurrentScreenNum() {
-    let pathname = window.location.pathname; // e.g. '/1'
+    let pathname = window.location.pathname; // e.g. '/walmart/1'
     let currentScreenNum = parseInt(pathname.split('/').slice(-1)[0]);
     return currentScreenNum;
   }
 
+  window.getCurrentClient = () => {
+    let pathname = window.location.pathname; // e.g. '/walmart/1'
+    let clientName = pathname.split('/').slice(-2)[0];
+    return clientName;
+  };
+
   function getImagePath(imageNum) {
-    return `/public/images/WalmartDeck${imageNum}.jpg`;
+    var clientName = window.getCurrentClient().toLowerCase();
+    if (clientName == "walmart") {
+      return `/images/${clientName}/WalmartDeck${imageNum}.jpg`;
+    } else if (clientName == "sainsbury") {
+      return `/images/${clientName}/SainsburyDeck${imageNum}.jpg`;
+    } else {
+      console.error(`Unknown client name ${clientName}`);
+      return "";
+    }
+
   }
 
 })();
